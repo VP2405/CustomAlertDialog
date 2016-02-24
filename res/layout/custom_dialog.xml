@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@drawable/dialogs">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip" >
+
+        <ImageView 
+            android:id="@+id/dialog_title_image"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/info"/>
+        <TextView 
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:text="@string/title"
+            android:layout_toRightOf="@id/dialog_title_image"
+            android:textColor="#00adef"
+            android:textSize="20sp"/>
+        
+    </RelativeLayout>
+    <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#00adef"/>
+    <TextView 
+        android:id="@+id/dialog_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:text="@string/msg"
+        android:gravity="center"
+        android:layout_marginTop="10dip"/>
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="20dip">
+
+        <Button 
+            android:id="@+id/negative_button"
+            android:layout_width="100dip"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/positive_button"
+            android:layout_marginLeft="5dp"
+            android:background="#00adef"
+            android:text="@string/no"/>
+
+        <Button
+            android:id="@+id/positive_button"
+            android:layout_width="100dip"
+            android:layout_height="30dp"
+            android:layout_alignBaseline="@+id/negative_button"
+            android:layout_alignBottom="@+id/negative_button"
+            android:layout_alignParentLeft="true"
+            android:background="#00adef"
+            android:text="@string/yes" />
+
+    </RelativeLayout>
+</LinearLayout>
